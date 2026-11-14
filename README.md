@@ -32,3 +32,20 @@ Precisa do Python 3.8 ou mais novo. Não há dependências.
 ```bash
 python desafio.py
 ```
+
+## O que melhorei em relação à referência
+
+O ponto de partida foi o
+[código do expert](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/desafio.py).
+Em relação a ele:
+
+- **Limite de saques funcionando.** Na referência, `sacar` não devolve
+  `numero_saques`, então o contador nunca sobe e dá para sacar à vontade.
+  Aqui a função devolve o contador atualizado e o 4º saque do dia é recusado.
+- **Entrada de valores segura.** Digitar texto no lugar de um número não
+  derruba o programa, e valores com vírgula (`50,00`) são aceitos.
+- **CPF validado.** Pontos e traços são removidos (`123.456.789-01` vira
+  `12345678901`), o CPF precisa ter 11 dígitos e não pode repetir.
+- **Extrato como lista** de movimentações, em vez de uma string concatenada.
+- **Menu tolerante:** aceita a opção em maiúscula ou com espaços sobrando.
+- **Listar contas** avisa quando ainda não há nenhuma conta cadastrada.
